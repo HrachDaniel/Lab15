@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Прості числа та парність</title>
+</head>
+<body>
+  <h1>Прості числа від 0 до 100</h1>
+  <div id="primes"></div>
+
+  <h1>Числа від 0 до 10 з описом парності</h1>
+  <div id="parity"></div>
+
+  <script>
+
+    function findPrimes(limit) {
+      let num = 2;
+      let primes = [];
+      while (num <= limit) {
+        let isPrime = true;
+        for (let i = 2; i <= Math.sqrt(num); i++) {
+          if (num % i === 0) {
+            isPrime = false;
+            break;
+          }
+        }
+        if (isPrime) {
+          primes.push(num);
+        }
+        num++;
+      }
+      return primes;
+    }
+
+    let primeNumbers = findPrimes(100);
+    document.getElementById("primes").innerHTML = primeNumbers.join(", ");
+
+    function describeNumbers() {
+      let num = 0;
+      let result = "";
+      do {
+        if (num === 0) {
+          result += num + " - це нуль<br>";
+        } else if (num % 2 === 0) {
+          result += num + " - парне число<br>";
+        } else {
+          result += num + " - непарне число<br>";
+        }
+        num++;
+      } while (num <= 10);
+      return result;
+    }
+
+    document.getElementById("parity").innerHTML = describeNumbers();
+  </script>
+</body>
+</html>
