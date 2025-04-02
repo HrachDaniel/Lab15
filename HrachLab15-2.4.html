@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Прості числа та парність</title>
+</head>
+<body>
+  <script>
 let dayNumber = parseInt(prompt("Введіть номер дня тижня (1-7):"));
 let dayName;
 
@@ -30,3 +37,8 @@ switch (dayNumber) {
 if (dayName) {
   alert("День тижня: " + dayName);
 }
+
+    document.getElementById("parity").innerHTML = describeNumbers();
+  </script>
+</body>
+</html>
