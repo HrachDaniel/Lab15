@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Прості числа та парність</title>
+</head>
+<body>
+  <script>
 let month = parseInt(prompt("Введіть номер місяця (1-12):"));
 let season;
 let monthName;
@@ -8,6 +15,7 @@ switch (month) {
   case 2:
     monthName = "Лютий";
   case 12:
+    monthName = "Грудень";
     season = "Зима";
     break;
   case 3:
@@ -15,6 +23,7 @@ switch (month) {
   case 4:
     monthName = "Квітень";
   case 5:
+    monthName = "Травень";
     season = "Весна";
     break;
   case 6:
@@ -22,6 +31,7 @@ switch (month) {
   case 7:
     monthName = "Липень";
   case 8:
+    monthName = "Серпень";
     season = "Літо";
     break;
   case 9:
@@ -39,3 +49,8 @@ switch (month) {
 if (season) {
   alert(monthName + " - " + season);
 }
+
+    document.getElementById("parity").innerHTML = describeNumbers();
+  </script>
+</body>
+</html>
